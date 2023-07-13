@@ -1,11 +1,9 @@
 // llamar a una variable de entorno
+const URL_usuario = 'http://localhost:4000/';
+const URL_producto = 'http://localhost:4000/';
+/*
 const URL_usuario = import.meta.env.VITE_API_USUARIO;
 const URL_producto = import.meta.env.VITE_API_PRODUCTO;
-/*
-GET devuelven una lista de elementos o un elemento
-POST me permiten crear un elemento
-PUT / PATCH  me permiten editar un elemento
-DELETE me permiten eliminar un elemento
 */ 
 export const iniciarSesion = async (usuario)=>{
     try{

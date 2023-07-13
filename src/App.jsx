@@ -11,6 +11,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdministrador from "./components/routes/RutasAdministrador";
+import Tareas from "./components/views/tareas/Tareas";
+import EditarTarea from "./components/views/tareas/EditarTarea";
+import CrearTarea from "./components/views/tareas/CrearTarea";
 
 function App() {
   const usuarioSessionStorage = JSON.parse(sessionStorage.getItem('usuario')) || {}
@@ -36,7 +39,9 @@ function App() {
             </RutasProtegidas>
           }
         ></Route>
-      
+        <Route path="/tareas" element={<Tareas/>}></Route>
+        <Route path="/tareas/editar/:id" element={<EditarTarea/>}></Route>
+        <Route path="/tareas/nueva" element={<CrearTarea/>}></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>
       <Footer></Footer>
